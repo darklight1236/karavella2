@@ -10,6 +10,16 @@
     <title>КАРАВЕЛЛА</title>
 </head>
 <body>
+
+    <div class="preloader" id="preloader">
+        <div class="cssload-thecube">
+            <div class="cssload-cube cssload-c1"></div>
+            <div class="cssload-cube cssload-c2"></div>
+            <div class="cssload-cube cssload-c4"></div>
+            <div class="cssload-cube cssload-c3"></div>
+        </div>
+    </div>
+
     <header>
         <div class="container">
             <div class="header_menu">
@@ -17,22 +27,22 @@
                     <img src="img/logo.svg" alt="">
                 </div>
                 <div class="header__menu">
-                    <ul class="header__menu_ul">
-                        <li class="header__menu_li"><a class="effect-1" href="">хит продаж</a></li>
-                        <li class="header__menu_li"><a class="effect-1" href="">о нас</a></li>
-                        <li class="header__menu_li"><a class="effect-1" href="">достижения</a></li>
-                        <li class="header__menu_li"><a class="effect-1" href="">преимущества</a></li>
-                        <li class="header__menu_li"><a class="effect-1" href="">каталог</a></li>
+                    <ul id="nav_menu" class="header__menu_ul">
+                        <li class="header__menu_li"><a class="effect-1" href="#hit_sales">хит продаж</a></li>
+                        <li class="header__menu_li"><a class="effect-1" href="#about_us">о нас</a></li>
+                        <li class="header__menu_li"><a class="effect-1" href="#our_advantages">преимущества</a></li>
+                        <li class="header__menu_li"><a class="effect-1" href="#our_archievemtnts">достижения</a></li>
+                        <li class="header__menu_li"><a class="effect-1" href="#free_catalog">каталог</a></li>
                     </ul>
                 </div>
-                <div class="header__button">
-                    <button class="h_btn">контакты</button>
+                <div id="header__button" class="header__button scroll_bottom">
+                    <a href="#footer"><button class="h_btn">контакты</button></a>
                 </div>
             </div>
         </div>
     </header>
 
-    <section class="block1">
+    <section id="block1" class="block1">
         <div class="container">
             <div class="block1__helper">
 
@@ -61,15 +71,15 @@
             </div>
         </div>
     </section>
-    <section class="for_skipArrow">
+    <section id="for_skipArrow" class="for_skipArrow">
         <div class="container">
-            <div class="skipArrow__helper">
-                <img src="img/ArrowSkip.svg" alt="">
+            <div id="skipToHitSales" class="skipArrow__helper">
+                <a href="#hit_sales"><img src="img/ArrowSkip.svg" alt=""></a>
             </div>
         </div>
     </section>
 
-    <section class="hit_sales">
+    <section id="hit_sales" class="hit_sales">
         <div class="container">
             <div class="hit_sales__helper">
 
@@ -99,7 +109,7 @@
         </div>
     </section>
 
-    <section class="about_us">
+    <section id="about_us" class="about_us">
         <div class="container">
             <div class="about_us__helper">
 
@@ -126,14 +136,19 @@
                             современную, практичную и надежную мебель. Мы всегда открыты 
                             для сотрудничества!</p>
                     </div>
-                    <div class="au__right"></div>
+                    <div class="au__right">
+                        <!-- <video class="au__right__video" controls>
+                            <source src="video/cat.mp4">
+                        </video> -->
+                        <iframe class="au__right__video" src="https://www.youtube.com/embed/XvZ512eBsuU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <section class="our_advantages">
+    <section id="our_advantages" class="our_advantages">
         <div class="container">
             <div class="our_advantages__helper">
 
@@ -201,7 +216,7 @@
         </div>
     </section>
 
-    <section class="our_archievemtnts">
+    <section id="our_archievemtnts" class="our_archievemtnts">
         <div class="container">
             <div class="o_arch__helper">
 
@@ -218,7 +233,7 @@
         </div>
     </section>
 
-    <section class="free_catalog">
+    <section id="free_catalog" class="free_catalog">
         <div class="container">
             <div class="free_cat__helper">
 
@@ -234,7 +249,7 @@
         </div>
     </section>
 
-    <footer>
+    <footer id="footer">
         <div class="container">
             <div class="footer__helper">
                 <div class="footer_row1">
@@ -242,10 +257,18 @@
                 </div>
                 <div class="footer_row2">
                     <div class="contact_icon">
-                        <a href=""><img src="img/social/vk.svg" alt=""></a>
-                        <a href=""><img src="img/social/phone.svg" alt=""></a>
-                        <a href=""><img src="img/social/instagram.svg" alt=""></a>
-                        <a href=""><img src="img/social/youtube.svg" alt=""></a>
+                        <a href="">
+                            <img src="img/social/vk.svg" alt="">
+                        </a>
+                        <a href="">
+                            <img src="img/social/phone.svg" alt="">
+                        </a>
+                        <a href="">
+                            <img src="img/social/instagram.svg" alt="">
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCZcv3X-mgyQMnOB0eWGYl3Q" target="_blank">
+                            <img src="img/social/youtube.svg" alt="">
+                        </a>
                     </div>
                 </div>
             </div>
@@ -253,9 +276,41 @@
     </footer>
 
 
+    <div id="toTop">
+        <img src="img/arrow/arrowUp.svg" alt="">
+    </div>
+
     <div class="msg_box">
         <img src="img/message_icon.svg" class="msg_box__img" alt="">
     </div>
+
+
+    <!-- <div class="black_layer"></div>
+    <div class="email_layer">
+        <div class="email_form">
+            <div class="container">
+                <div class="email_f__helper">
+
+                    <div class="section__row1">
+                        <p class="section__title">Быстрая регистрация</p>
+                        <div class="section__hr"></div>
+                    </div>
+
+                    <div class="email_f__container">
+                        <div class="input_form_column">
+                            <input type="text" value="" placeholder="Название организации">
+                            <input type="text" value="" placeholder="Город">
+                            <input type="text" value="" placeholder="Телефон">
+                            <input type="text" value="" placeholder="Почта">
+                        </div>
+                        <div class="form_submit">Отправить</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div> -->
+
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
