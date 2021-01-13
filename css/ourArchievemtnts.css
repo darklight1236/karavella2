@@ -1,0 +1,20 @@
+/* frame5 */
+.our_archievemtnts{
+    width: 100%;
+    height: 640px;
+    margin-top: 20px;
+}
+.o_arch__helper > .section__row1 > .section__hr{
+    width: 541px !important;
+}
+.o_arch__helper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.our_arch__container > img {
+    object-fit: contain;
+    user-select: none;
+}
