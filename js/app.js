@@ -4,15 +4,13 @@ window.onload = function () {
   preloader.style.display = 'none';
 }
 
-let email_layer;
-
 // form
 $('.free_cat__button').on('click', function() {
   $('body').append(`
-  <div class="black_layer"></div>
-    <div class="email_layer">
+        <div class="black_layer" onclick="black_l__close(event)"></div>
         <div class="email_form">
             <div class="container">
+                
                 <div class="email_f__helper">
 
                     <div class="section__row1">
@@ -20,7 +18,7 @@ $('.free_cat__button').on('click', function() {
                         <div class="section__hr"></div>
                     </div>
 
-                    <div class="email_f__container">
+                    <div class="email_f__container" id="testim">
                         <div class="input_form_column">
                             <input type="text" value="" placeholder="Название организации">
                             <input type="text" value="" placeholder="Город">
@@ -31,17 +29,18 @@ $('.free_cat__button').on('click', function() {
                     </div>
 
                 </div>
+
+
             </div>
+
         </div>
-    </div>
   `);
-  email_layer = document.querySelector('.email_layer');
 });
 
-
-email_layer.addEventListener('click', function() {
-  console.log('test');
-})
+function black_l__close(e) {
+  $('.email_form').remove();
+  $('.black_layer').remove();
+}
 
 
 // carousel

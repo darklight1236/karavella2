@@ -563,7 +563,7 @@ footer > .container {
 /* form */
 .black_layer{
     position: fixed;
-    z-index: 1000;
+    z-index: 1009;
     height: 100%;
     width: 100%;
     top: 0;
@@ -580,6 +580,10 @@ footer > .container {
     display: flex;
     justify-content: center;
     align-items: center;
+    background: rgba(0,0,0,0.8);
+}
+.email_f__helper{
+    z-index: 1111;
 }
 .email_form{
     max-width: 600px;
@@ -588,6 +592,11 @@ footer > .container {
     height: 100%;
     border-radius: 25px;
     background: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50%);
+    position: fixed;
+    z-index: 1010;
 }
 .email_form .section__row1{
     margin-bottom: 20px !important;
