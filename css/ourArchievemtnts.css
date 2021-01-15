@@ -17,4 +17,6 @@
 .our_arch__container > img {
     object-fit: contain;
     user-select: none;
+    max-width: 1400px;
+    width: 100%;
 }
