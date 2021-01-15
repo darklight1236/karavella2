@@ -203,7 +203,7 @@
                                 <div class="oa_column__txt_subtitle">
                                     <ul>
                                         <li>Работаем с 1996г</li>
-                                        <li>Более 500 тыс клиентов.</li>
+                                        <li>Более 500 тыс клиентов</li>
                                     </ul>
                                 </div>
                             </div>

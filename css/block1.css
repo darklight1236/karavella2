@@ -16,7 +16,8 @@
 }
 .block1__left{
     height: 100%;
-    width: 410px;
+    max-width: 410px;
+    width: 100%;
     user-select: none;
 }
 .block1__right{
