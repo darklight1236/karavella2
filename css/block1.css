@@ -83,6 +83,7 @@
     font-weight: normal;
     font-size: 15px;
     line-height: 15px;
+    text-transform: uppercase;
 }
 .for_skipArrow{
     width: 100%;
