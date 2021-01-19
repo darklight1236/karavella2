@@ -12,7 +12,88 @@
 @import "/css/preloader.css";
 @import "/css/hover.css";
 @import "/css/emailForm.css";
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&family=Noto+Serif&family=Philosopher:wght@700&display=swap');
 
+@media screen and (max-width: 1199px){
+    .block1__left {
+        height: 100%;
+        /* max-width: 40%; */
+        width: 40%;
+        user-select: none;
+    }
+    .block1__right {
+        height: 100%;
+        width: 50%;
+        user-select: none;
+    }
+    .block1__right > img {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 1009px){
+    .sl > button {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .hit_sales {
+        height: 100% !important;
+        /* height: 100%; */
+        width: 100%;
+        margin-top: 90px;
+    }
+    .about_us {
+        margin-top: 60px;
+    }
+    .free_cat__button { 
+        width: 100%;
+    }
+    .msg_box__img {
+        width: 65%;
+    }
+    .msg_box {
+        height: 50px;
+        width: 50px;
+    }
+    #toTop {
+        width: 50px;
+        height: 50px;
+    }
+    #toTop > img {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 434px){
+    .title_bl1 {
+        font-size: 60px;
+    }
+}
+@media screen and (max-width: 430px){
+    .free_cat__helper > .section__row1 > .section__title {
+        font-style: normal !important;
+        font-weight: bold !important;
+        font-size: 20px !important;
+        line-height: 39px !important;
+    }
+    .section__title {
+        font-size: 25px;
+    }
+    .oa__title {
+        color: white;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 25px;
+        line-height: 49px;
+        text-transform: uppercase;
+    }
+}
+@media screen and (max-width: 379px){
+    .title_bl1 {
+        font-size: 50px;
+    }
+}
 @media screen and (max-width: 991px){
     .about_us__container {
         width: 100%;
@@ -22,13 +103,30 @@
         align-items: center;
         flex-direction: column;
     }
+    .au__left {
+        width: 100%;
+        height: auto;
+    }
+    .au__right {
+        width: 100%;
+    }
+    .oa__title {
+        text-align: center;
+    }
+    .oa__hr {
+        width: 100%;
+    }
+    .o_arch__helper > .section__row1 > .section__hr {
+        width: 100% !important;
+    }
+    .section__title {
+        text-align: center;
+    }
     .our_advantages{
         margin-top: 50px;
     }
-    .hit_sales {
-        height: 700px;
+    .hit_sales__row2{
         width: 100%;
-        margin-top: 90px;
     }
     .our_advantages {
         height: auto;
@@ -60,6 +158,9 @@
         margin-top: 20px;
         padding-bottom: 30px;
     }
+    .for_skipArrow{
+        display: none;
+    }
     header {
         display: none;
     }
@@ -76,9 +177,6 @@
         height: auto;
         margin-top: 40px;
     }
-    .for_skipArrow{
-        display: none;
-    }
     .hit_sales {
         height: 700px;
         width: 100%;
@@ -90,9 +188,17 @@
     }
     .block1__left {
         margin-bottom: 15px;
+        width: 100%;
     }
-    .sl > button {
-        display: none;
+    .block1__right {
+        height: 100%;
+        width: 100%;
+        user-select: none;
+    }
+    
+
+    .free_catalog {
+        padding-bottom: 10px;
     }
     .free_cat__helper > .section__row1 > .section__hr {
         width: 100% !important;

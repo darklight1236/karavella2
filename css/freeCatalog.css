@@ -16,7 +16,7 @@
     justify-content: center;
 }
 .free_cat__desc{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Noto Serif', serif;
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
@@ -36,7 +36,7 @@
     cursor: pointer;
     height: 90px;
     width: 480px;
-    background: #E52524;
+    background: rgba(49, 146, 152, .7);
     border-radius: 50px;
     display: flex;
     justify-content: center;
@@ -51,20 +51,21 @@
 }
 .free_cat__button:active{
     box-shadow: 0 0 10px rgba(0,0,0,0.5) !important;
-    background: #C01817;
+    background: rgba(49, 146, 152, 1);
 }
-
-.h_btn{
-    width: 169px;
-    height: 33px;
-    background: #FDFDFD;
-    border-radius: 50px;
-    outline: none;
-    border: none;
-    text-transform: uppercase;
-    box-shadow: 0 0 7px rgba(0,0,0,0.5);
+.close_form{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    z-index: 1010;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
 }
-.h_btn:active{
-    box-shadow: 0 0 2px rgba(0,0,0,0.5) !important;
-    background: #F1F1F1;
+.close_form:hover{
+    transform: scale(1.3);
+}
+.close_form > img{
+    width: 100%;
 }

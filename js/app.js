@@ -12,7 +12,7 @@ $('.free_cat__button').on('click', function() {
             <div class="container">
                 
                 <div class="email_f__helper">
-
+                    <div class="close_form" onclick="close_form()"><img src="img/close.svg" alt=""></div>
                     <div class="section__row1">
                         <p class="section__title">Быстрая регистрация</p>
                         <div class="section__hr"></div>
@@ -32,6 +32,11 @@ $('.free_cat__button').on('click', function() {
         </div>
   `);
 });
+
+function close_form() {
+  $('.black_layer').remove();
+  $('.email_form').remove();
+}
 
 function black_l__close(e) {
   // наличие чёрного фона
