@@ -58,6 +58,7 @@
     line-height: 27px;
     cursor: pointer;
     user-select: none;
+    border: none;
 }
 .form_submit:active{
     background: #549692;

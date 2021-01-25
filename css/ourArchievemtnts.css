@@ -14,9 +14,41 @@
     flex-direction: column;
     align-items: center;
 }
+.our_arch__container{
+    /* display: none; */
+}
 .our_arch__container > img {
     object-fit: contain;
     user-select: none;
     max-width: 1400px;
     width: 100%;
+}
+.our_arc__mobile {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+}
+.o_arch_r{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.o_arch_r_column{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.o_arch_r_column {
+    width: 40%;
+}
+.o_arch_r > img{
+    width: 40%;
+}
+.o_arch_r_solo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.o_arch_r_solo > img {
+    width: 40%;
 }

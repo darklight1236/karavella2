@@ -14,18 +14,20 @@ $('.free_cat__button').on('click', function() {
                 <div class="email_f__helper">
                     <div class="close_form" onclick="close_form()"><img src="img/close.svg" alt=""></div>
                     <div class="section__row1">
-                        <p class="section__title">Быстрая регистрация</p>
+                        <p class="section__title">Получить каталог</p>
                         <div class="section__hr"></div>
                     </div>
 
                     <div class="email_f__container" id="testim">
+                      <form action="" method="POST" name="form">
                         <div class="input_form_column">
-                            <input type="text" value="" placeholder="Название организации">
-                            <input type="text" value="" placeholder="Город">
-                            <input type="text" value="" placeholder="Телефон">
-                            <input type="text" value="" placeholder="Почта">
+                            <input class="email_inp" name="org" type="text" value="" placeholder="Название организации" required>
+                            <input class="email_inp" name="city" type="text" value="" placeholder="Город" required>
+                            <input class="email_inp" name="phone" type="text" value="" placeholder="Телефон" required>
+                            <input class="email_inp" name="email" type="text" value="" placeholder="Почта" required>
                         </div>
-                        <div class="form_submit">Отправить</div>
+                        <input type="submit" name="saveinf" class="form_submit" value="Отправить">
+                      </form>
                     </div>
                 </div>
             </div>

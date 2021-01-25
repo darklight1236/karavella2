@@ -16,10 +16,9 @@ footer > .container {
     justify-content: center;
 }
 .contact_txt{
-    font-family: 'Noto Serif', serif;
     color: #fff;
     text-transform: uppercase;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto Slab', serif;
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
@@ -37,6 +36,14 @@ footer > .container {
     width: 100%;
     display: flex;
     justify-content: center;
+}
+.footer_row1_5{
+    color: white;
+    font-family: 'Roboto Slab', serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 13px;
 }
 .contact_icon{
     width: 240px;

@@ -19,8 +19,10 @@
     margin-bottom: 65px;
 }
 .hit_sales__row2{
-    max-width: 850px;
+    max-width: 90%;
     height: 100%;
+    display: flex;
+    justify-content: center;
 }
 .sl{
     width: 100%;
@@ -31,7 +33,7 @@
     width: 840px;
 }
 .section__title{
-    font-family: 'Philosopher', sans-serif;
+    font-family: 'Roboto Slab', serif;
     color: #319298;
     font-style: normal;
     font-weight: bold;

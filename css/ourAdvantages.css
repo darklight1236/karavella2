@@ -7,7 +7,7 @@
     margin-bottom: 65px;
 }
 .oa__title {
-    font-family: 'Philosopher', sans-serif;
+    font-family: 'Roboto Slab', serif;
     color: white;
     font-style: normal;
     font-weight: bold;
@@ -25,7 +25,7 @@
 .our_advantages{
     width: 100%;
     height: 685px;
-    margin-top: 200px;
+    /* margin-top: 200px; */
     background: url(/img/frame4_bg.svg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -69,6 +69,7 @@
     align-items: center;
 }
 .oa_column__txt_title{
+    font-family: 'Jost', sans-serif;
     color: #59EFE6;
     text-transform: uppercase;
     font-style: normal;
@@ -79,7 +80,7 @@
 }
 .oa_column__txt_subtitle > ul > li{
     list-style-image: url(/img/list_style_type.svg);
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Noto Serif', serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
