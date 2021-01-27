@@ -19,14 +19,16 @@ $('.free_cat__button').on('click', function() {
                     </div>
 
                     <div class="email_f__container" id="testim">
-                      <form action="" method="POST" name="form">
+                      <form action="#" method="POST" class=""formID id="formID" name="form">
+                        <input type="hidden" id='admin_email' name="admin_email[]" value="gamasutora@yandex.ru">
+		                    <input type="hidden" name="form_subject" value="Каравелла каталог">
                         <div class="input_form_column">
-                            <input class="email_inp" name="org" type="text" value="" placeholder="Название организации" required>
-                            <input class="email_inp" name="city" type="text" value="" placeholder="Город" required>
-                            <input class="email_inp" name="phone" type="text" value="" placeholder="Телефон" required>
-                            <input class="email_inp" name="email" type="text" value="" placeholder="Почта" required>
+                            <input class="email_inp _req" name="org" type="text" value="" placeholder="Название организации" required>
+                            <input class="email_inp _req" name="city" type="text" value="" placeholder="Город" required>
+                            <input class="email_inp _req" name="phone" type="text" value="" placeholder="Телефон" required>
+                            <input class="email_inp _req _email" id='user_email' name="admin_email[]" type="text" value="" placeholder="Почта" required>
                         </div>
-                        <input type="submit" name="saveinf" class="form_submit" value="Отправить">
+                        <button type="submit" name="saveinf" class="form_submit">Отправить</button>
                       </form>
                     </div>
                 </div>
@@ -34,6 +36,47 @@ $('.free_cat__button').on('click', function() {
         </div>
   `);
 });
+
+
+//Получаю данные из формы и отправляю в php
+const cat_btn = document.querySelector('.free_cat__button');
+cat_btn.addEventListener('click', () => {
+
+const form_submit = document.querySelector('.form_submit');
+
+form_submit.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  let user_email = document.getElementById('user_email');
+  let admin_email = document.getElementById('admin_email');
+
+  admin_email.value = user_email.value;
+  console.log(admin_email);
+
+  const form = document.forms.form;
+  let formData = new FormData(form);
+
+  let xhr = new XMLHttpRequest();
+
+  let response = fetch('sendbd.php', {
+      method: 'POST',
+      body: formData
+  });
+
+  xhr.open('POST', 'mail.php', true);
+  xhr.send(formData);
+
+
+
+
+  form.reset();
+  // close_form();
+}); 
+
+});
+// -------------------------------------------------
+
+
 
 function close_form() {
   $('.black_layer').remove();

@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #EDEDED;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+*::selection { background: #66C1BC; }
+*::-moz-selection { background: #66C1BC; }
+
+li{
+    list-style-type: none;
+}
+a:hover{
+    text-decoration: none;
+    color: #000;
+}
+button:active, button:focus {
+    outline: none !important;
+  }
+button::-moz-focus-inner {
+    border: 0 !important;
+}
+a{
+    text-decoration: none;
+    color: black;
+    position: relative;
+}
+
+#toTop {
+    display: none;
+    width: 77px;
+    height: 77px;
+    background:#66C1BC;
+    border-radius: 100%;
+    position:fixed;
+    bottom: 45px; /* отступ кнопки от нижнего края страницы*/
+    left: 45px;
+    cursor:pointer;
+    display:none;
+    color:#333;
+    font-family:verdana;
+    font-size:11px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#toTop > img {
+    width: 45px;
+    height: 45px;
+}

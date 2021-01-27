@@ -9,33 +9,14 @@
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
     <link rel="stylesheet" href="css/style.css">
     <title>КАРАВЕЛЛА</title>
+    <script>
+        if(window.history.replaceState) 
+        {
+            window.history.replaceState(null,null,window.location.href);
+        }    
+    </script>
 </head>
 <body>
-<?php
-require_once 'connection.php';
-
-if(isset($_POST['org']) && isset($_POST['city']) && isset($_POST['phone']) && isset($_POST['email'])){
-    $link = mysqli_connect($host, $user, $password, $database)
-    or die("Ошибка " . mysqli_error($link));
-
-    $org = htmlentities(mysqli_real_escape_string($link, $_POST['org']));
-    $city = htmlentities(mysqli_real_escape_string($link, $_POST['city']));
-    $phone = htmlentities(mysqli_real_escape_string($link, $_POST['phone']));
-    $email = htmlentities(mysqli_real_escape_string($link, $_POST['email']));
-
-    $query = "INSERT INTO catalog VALUES (NULL, '$org', '$city', '$phone', '$email')";
-
-    $result = mysqli_query($link, $query) or die("Ошибка " . mysqli_error($link));
-    if($result){
-        $org = null;
-        $city = null;
-        $phone = null;
-        $email = null;
-    }
-    mysqli_close($link);
-}
-?>
-
 
     <div class="preloader" id="preloader">
         <div class="cssload-thecube">
@@ -294,7 +275,7 @@ if(isset($_POST['org']) && isset($_POST['city']) && isset($_POST['phone']) && is
                     <p class="free_cat__desc">Пройдите быструю регистрацию здесь и получите наш каталог бесплатно!</p>
                 </div>
 
-                <div class="free_cat__button">быстрая регистрация</div>
+                <div class="free_cat__button" id="cat_btn">быстрая регистрация</div>
 
             </div>
         </div>
@@ -360,5 +341,6 @@ if(isset($_POST['org']) && isset($_POST['city']) && isset($_POST['phone']) && is
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
     <script src="js/app.js"></script>
+    <!-- <script src="js/send.js"></script> -->
 </body>
 </html>
