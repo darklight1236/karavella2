@@ -101,3 +101,25 @@
     opacity: 1;
     visibility: visible;
 }
+#formID.invalid #user_email::before{
+    content: '';
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    width: 24px;
+    height: 24px;
+    background: url(../img/email/invalid.png);
+    background-size: cover;
+    z-index: 1000;
+} 
+#formID.valid #user_email::before{
+    content: '';
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    width: 24px;
+    height: 24px;
+    background: url(../img/email/valid.png);
+    background-size: cover;
+    z-index: 1000;
+} 

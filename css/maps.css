@@ -1,0 +1,40 @@
+.map_and_descriptions{
+    height: 240px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.map_desc{
+    width: 50%;
+    height: 100%;
+    color: #319298;
+}
+.map_desc .container{
+    height: 100%;
+}
+.maps{
+    height: 100%;
+    width: 50%;
+    box-sizing: border-box;
+}
+.container_helper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.routing{
+    font-family: 'Noto Serif', serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 20px;
+}
+.time_work{
+    font-family: 'Noto Serif', serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 20px;
+}

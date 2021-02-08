@@ -19,14 +19,17 @@ $('.free_cat__button').on('click', function() {
                     </div>
 
                     <div class="email_f__container" id="testim">
-                      <form action="#" method="POST" class=""formID id="formID" name="form">
-                        <input type="hidden" id='admin_email' name="admin_email[]" value="gamasutora@yandex.ru">
-		                    <input type="hidden" name="form_subject" value="Каравелла каталог">
+                      <form action="#" method="POST" class="formID" id="formID" name="form">
+		                    <input type="hidden" name="form_subject" value="Фабрика каравелла">
                         <div class="input_form_column">
                             <input class="email_inp _req" name="org" type="text" value="" placeholder="Название организации" required>
                             <input class="email_inp _req" name="city" type="text" value="" placeholder="Город" required>
-                            <input class="email_inp _req" name="phone" type="text" value="" placeholder="Телефон" required>
+                            <input class="email_inp _req" name="phone" id='user_phone' type="text" value="" placeholder="Телефон" required>
+                            <span id="textPhone"></span>
                             <input class="email_inp _req _email" id='user_email' name="admin_email[]" type="text" value="" placeholder="Почта" required>
+                            <input type="hidden" name="email_copy" id='email_copy' value="">
+                            <input type="hidden" name="email_double[]" id='email_double' value="newhub1236@yandex.ru">
+                            <input type="hidden" name="file">
                         </div>
                         <button type="submit" name="saveinf" class="form_submit">Отправить</button>
                       </form>
@@ -36,7 +39,6 @@ $('.free_cat__button').on('click', function() {
         </div>
   `);
 });
-
 
 //Получаю данные из формы и отправляю в php
 const cat_btn = document.querySelector('.free_cat__button');
@@ -48,35 +50,59 @@ form_submit.addEventListener('click', (e) => {
   e.preventDefault();
 
   let user_email = document.getElementById('user_email');
-  let admin_email = document.getElementById('admin_email');
+  let email_copy = document.getElementById('email_copy');
 
-  admin_email.value = user_email.value;
-  console.log(admin_email);
+  email_copy.value = user_email.value;
 
-  const form = document.forms.form;
-  let formData = new FormData(form);
+  let regEmail = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+  let regPhone = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
+  let user_phone = document.getElementById('user_phone');
 
-  let xhr = new XMLHttpRequest();
+  if(!regPhone.test(user_phone.value)){
 
-  let response = fetch('sendbd.php', {
-      method: 'POST',
-      body: formData
-  });
+    alert('Введите корректный номер телефона!');
 
-  xhr.open('POST', 'mail.php', true);
-  xhr.send(formData);
+  }else{
 
+    if(!regEmail.test(user_email.value)){
 
+      alert('Введите корректный email!');
 
+    }else{
 
-  form.reset();
-  // close_form();
+      const form = document.forms.form;
+      let formData = new FormData(form);
+    
+      let xhr = new XMLHttpRequest();
+    
+      let response = fetch('sendbd.php', {
+          method: 'POST',
+          body: formData
+      });
+    
+      xhr.open('POST', 'mail.php', true);
+      xhr.send(formData);
+
+      send_double();
+
+      form.reset();
+      setTimeout(close_form, 500);
+
+    }
+
+  }
 }); 
 
 });
 // -------------------------------------------------
 
-
+function send_double() {
+  const form = document.forms.form;
+      let formData = new FormData(form);
+  let xhr2 = new XMLHttpRequest();
+      xhr2.open('POST', 'mail2.php', true);
+      xhr2.send(formData);
+}
 
 function close_form() {
   $('.black_layer').remove();

@@ -25,11 +25,20 @@ footer > .container {
     line-height: 18px;
 }
 .footer_row1{
-    height: 18px;
+    height: 70px;
     width: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     margin-bottom: 25px;
+}
+.contact_phone {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.contact_phone a {
+    color: white !important;
+    font-size: 20px;
 }
 .footer_row2{
     height: 35px;
@@ -56,4 +65,11 @@ footer > .container {
 .contact_icon > img{
     cursor: pointer;
     user-select: none;
+}
+.contact_phone_office a{
+    color: white;
+}
+.contact_phone_office {
+    color: white;
+    font-size: 20px;
 }

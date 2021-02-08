@@ -47,3 +47,13 @@ a:before, a:after {
     /* box-shadow: 0 0 2px rgba(0,0,0,0.5) !important; */
     background: #F1F1F1;
 }
+.tel_cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tel_cont_a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
